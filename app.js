@@ -27,7 +27,7 @@ timeline
   .fromTo(
     footer,
     1.5,
-    { y: "2000%" },
+    { y: "3000%" },
     { y: "0%", ease: Power2.easeOut },
     "-=1.3"
   );
