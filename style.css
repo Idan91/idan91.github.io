@@ -231,6 +231,7 @@ footer {
   .portfolios h1 {
     letter-spacing: 1.5rem;
     font-size: 1.5rem;
+    -webkit-text-stroke: 1px rgb(34, 34, 34);
   }
 
   .box {
