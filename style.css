@@ -175,7 +175,7 @@ hr {
 }
 
 #before-footer {
-  height: 8vh;
+  height: 15vh;
 }
 
 footer {
@@ -220,97 +220,7 @@ footer {
   }
 
   #before-footer {
-    height: 3vh;
-  }
-
-  footer {
-    font-size: 0.45rem;
-    letter-spacing: 0.2rem;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  /* body {
-    height: 100%;
-  } */
-
-  .logo-container {
-    height: calc(var(--logo-width) / 2);
-  }
-
-  .portfolios h1 {
-    letter-spacing: 1.5rem;
-    font-size: 1.5rem;
-    -webkit-text-stroke: 1px rgb(34, 34, 34);
-  }
-
-  .box {
-    width: calc(var(--box-size) * 0.75);
-    height: calc(var(--box-size) * 0.75);
-    margin: var(--box-margin);
-    box-shadow: 0px 60px 60px -10px #8a8c76;
-    font-size: 1.75rem;
-  }
-
-  .box-comment {
-    font-size: 0.75rem;
-  }
-
-  hr {
-    height: 4vh;
-  }
-
-  #after-logo {
-    height: 7vh;
-  }
-
-  #before-footer {
-    height: 8vh;
-  }
-
-  footer {
-    font-size: 0.45rem;
-    letter-spacing: 0.2rem;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  /* body {
-    height: 100%;
-  } */
-
-  .logo-container {
-    height: calc(var(--logo-width) / 2);
-  }
-
-  .portfolios h1 {
-    letter-spacing: 1.5rem;
-    font-size: 1.5rem;
-    -webkit-text-stroke: 1px rgb(34, 34, 34);
-  }
-
-  .box {
-    width: calc(var(--box-size) * 0.75);
-    height: calc(var(--box-size) * 0.75);
-    margin: var(--box-margin);
-    box-shadow: 0px 60px 60px -10px #8a8c76;
-    font-size: 1.75rem;
-  }
-
-  .box-comment {
-    font-size: 0.75rem;
-  }
-
-  hr {
-    height: 4vh;
-  }
-
-  #after-logo {
-    height: 7vh;
-  }
-
-  #before-footer {
-    height: 8vh;
+    height: 10vh;
   }
 
   footer {
@@ -329,8 +239,10 @@ footer {
   } */
 
   .portfolios h1 {
+    position: relative;
     letter-spacing: 1.25rem;
     font-size: 1.25rem;
+    left: 1.75%;
   }
 
   .box {
@@ -341,8 +253,8 @@ footer {
     font-size: 1rem;
   }
 
-  hr {
-    height: 3vh;
+  #before-footer {
+    height: 15vh;
   }
 
   footer {
@@ -351,36 +263,32 @@ footer {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .portfolios h1 {
+    left: 2.5%;
+  }
+
+  .box {
+    width: calc(var(--box-size) * 0.4);
+    height: calc(var(--box-size) * 0.4);
+    margin: calc(var(--box-margin) * 0.4);
+    box-shadow: 0px 60px 60px -10px #8a8c76;
+    font-size: 0.85rem;
+  }
+
+  footer {
+    font-size: 0.1rem;
+    letter-spacing: 0.1rem;
+  }
+  hr {
+    height: 2vh;
+  }
+}
+
 @media screen and (max-height: 700px) {
   body {
     height: 120vh;
   }
-
-  /* .logo-container {
-    height: calc(var(--logo-width) / 2);
-  } */
-
-  /* .portfolios h1 {
-    letter-spacing: 1.25rem;
-    font-size: 1.25rem;
-  }
-
-  .box {
-    width: calc(var(--box-size) * 0.45);
-    height: calc(var(--box-size) * 0.45);
-    margin: calc(var(--box-margin) * 0.5);
-    box-shadow: 0px 60px 60px -10px #8a8c76;
-    font-size: 1rem;
-  }
-
-  hr {
-    height: 3vh;
-  }
-
-  footer {
-    font-size: 0.25rem;
-    letter-spacing: 0.2rem;
-  } */
 }
 
 @media screen and (max-height: 550px) {
