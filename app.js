@@ -29,5 +29,5 @@ timeline
     1.5,
     { y: "2000%" },
     { y: "0%", ease: Power2.easeOut },
-    "-=1.5"
+    "-=1.3"
   );
