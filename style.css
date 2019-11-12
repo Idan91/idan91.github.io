@@ -152,7 +152,7 @@ nav {
   top: 90%;
 }
 
-.photo-box:hover::after {
+.under-construction:hover::after {
   background: #741111;
 }
 
