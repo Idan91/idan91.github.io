@@ -243,6 +243,7 @@ footer {
     letter-spacing: 1.25rem;
     font-size: 1.25rem;
     left: 1.75%;
+    -webkit-text-stroke: 0.7px var(--primary-color);
   }
 
   .box {
@@ -266,6 +267,7 @@ footer {
 @media screen and (max-width: 400px) {
   .portfolios h1 {
     left: 2.5%;
+    -webkit-text-stroke: 0.5px var(--primary-color);
   }
 
   .box {
