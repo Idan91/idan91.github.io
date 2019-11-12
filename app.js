@@ -8,7 +8,13 @@ const footer = document.querySelector("footer");
 const timeline = new TimelineMax();
 
 timeline
-  .fromTo(logo, 2, { top: "-100%" }, { top: "100%", ease: Power2.easeOut })
+  .fromTo(
+    logo,
+    2,
+    { top: "-100%" },
+    { top: "100%", ease: Power2.easeOut },
+    "+=0.4"
+  )
   .fromTo(
     portfolios,
     2,
