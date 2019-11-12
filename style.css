@@ -108,7 +108,7 @@ nav {
   );
   box-shadow: inset 0px 25px 150px 60px
     rgba(var(--shadow-shade), var(--shadow-shade), var(--shadow-shade), 0.4);
-  transition: all ease 0.2s;
+  transition: all ease 0.5s;
 }
 
 .box:hover {
@@ -120,8 +120,12 @@ nav {
   color: var(--bg-color-light);
 }
 
-.box:hover::after {
+.linked-box:hover::after {
   background: var(--hover-color);
+}
+
+.under-construction:hover::after {
+  background: #741111;
 }
 
 .box-comment {
@@ -150,10 +154,6 @@ nav {
 
 .photo-box p {
   top: 90%;
-}
-
-.under-construction:hover::after {
-  background: #741111;
 }
 
 .box-text-container {
