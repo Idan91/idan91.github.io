@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,500,700,900i&display=swap");
 
 :root {
   --primary-color: #2c2c2c;
-  --hover-color: #3b3d31;
+  --hover-color: #6a6c5d;
   --bg-color-light: #d7d8ca;
   --bg-color-dark: #9fa291;
   --box-size: 350px;
   --box-margin: 1.5rem;
   --logo-width: 150px;
+  --mask-shade: 105;
+  --shadow-shade: 30;
 }
 
 * {
@@ -24,7 +26,8 @@ body {
   );
   width: 100%;
   height: 100vh;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Montserrat", sans-serif;
 }
 
 nav {
@@ -53,7 +56,6 @@ nav {
 
 .portfolios {
   position: relative;
-  font-weight: 500;
   text-transform: uppercase;
   padding: 0rem;
   text-align: center;
@@ -62,12 +64,12 @@ nav {
 
 .portfolios h1 {
   font-weight: 900;
-  letter-spacing: 1.5rem;
+  letter-spacing: 2rem;
   font-style: italic;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   padding: 0rem;
   color: transparent;
-  -webkit-text-stroke: 1.5px rgb(34, 34, 34);
+  -webkit-text-stroke: 1px var(--primary-color);
 }
 
 .box-container {
@@ -83,11 +85,11 @@ nav {
   display: inline-block;
   margin: var(--box-margin);
   padding: 0rem;
-  box-shadow: 0px 60px 60px -10px #8a8c76;
-  color: white;
+  box-shadow: 0px 50px 45px -10px #7b7d69;
+  color: var(--bg-color-light);
   text-decoration: none;
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 
 .box::after {
@@ -98,8 +100,15 @@ nav {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background: rgba(78, 78, 78, 0.5);
-  box-shadow: inset 0px 25px 150px 60px rgba(0, 0, 0, 0.25);
+  background: rgba(
+    var(--mask-shade),
+    var(--mask-shade),
+    var(--mask-shade),
+    0.5
+  );
+  box-shadow: inset 0px 25px 150px 60px
+    rgba(var(--shadow-shade), var(--shadow-shade), var(--shadow-shade), 0.4);
+  transition: all ease 0.2s;
 }
 
 .box:hover {
@@ -108,7 +117,7 @@ nav {
 }
 
 .box:hover .box-comment {
-  color: white;
+  color: var(--bg-color-light);
 }
 
 .box:hover::after {
@@ -166,16 +175,17 @@ hr {
 }
 
 #before-footer {
-  height: 9vh;
+  height: 8vh;
 }
 
 footer {
   background: transparent;
   text-align: center;
-  font-weight: 200;
+  font-weight: 300;
   text-transform: uppercase;
   font-size: 0.65rem;
   letter-spacing: 0.5rem;
+  color: var(--primary-color);
 }
 
 /*Responsiveness*/
@@ -239,7 +249,7 @@ footer {
     height: calc(var(--box-size) * 0.75);
     margin: var(--box-margin);
     box-shadow: 0px 60px 60px -10px #8a8c76;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
   }
 
   .box-comment {
@@ -255,7 +265,52 @@ footer {
   }
 
   #before-footer {
-    height: 3vh;
+    height: 8vh;
+  }
+
+  footer {
+    font-size: 0.45rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* body {
+    height: 100%;
+  } */
+
+  .logo-container {
+    height: calc(var(--logo-width) / 2);
+  }
+
+  .portfolios h1 {
+    letter-spacing: 1.5rem;
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px rgb(34, 34, 34);
+  }
+
+  .box {
+    width: calc(var(--box-size) * 0.75);
+    height: calc(var(--box-size) * 0.75);
+    margin: var(--box-margin);
+    box-shadow: 0px 60px 60px -10px #8a8c76;
+    font-size: 1.75rem;
+  }
+
+  .box-comment {
+    font-size: 0.75rem;
+  }
+
+  hr {
+    height: 4vh;
+  }
+
+  #after-logo {
+    height: 7vh;
+  }
+
+  #before-footer {
+    height: 8vh;
   }
 
   footer {
@@ -283,31 +338,98 @@ footer {
     height: calc(var(--box-size) * 0.45);
     margin: calc(var(--box-margin) * 0.5);
     box-shadow: 0px 60px 60px -10px #8a8c76;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   hr {
     height: 3vh;
   }
 
-  /* .box:hover {
-    font-size: 1.5rem;
+  footer {
+    font-size: 0.25rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* body {
+    height: 100%;
   } */
-  /* 
+
+  .logo-container {
+    height: calc(var(--logo-width) / 2);
+  }
+
+  .portfolios h1 {
+    letter-spacing: 1.5rem;
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px rgb(34, 34, 34);
+  }
+
+  .box {
+    width: calc(var(--box-size) * 0.75);
+    height: calc(var(--box-size) * 0.75);
+    margin: var(--box-margin);
+    box-shadow: 0px 60px 60px -10px #8a8c76;
+    font-size: 1.75rem;
+  }
+
   .box-comment {
     font-size: 0.75rem;
-  } */
-  /* 
+  }
+
+  hr {
+    height: 4vh;
+  }
+
   #after-logo {
     height: 7vh;
-  } */
+  }
 
-  /* #before-footer {
-    height: 3vh;
-  } */
+  #before-footer {
+    height: 8vh;
+  }
 
   footer {
-    font-size: 0.35rem;
+    font-size: 0.45rem;
     letter-spacing: 0.2rem;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  body {
+    height: 120vh;
+  }
+
+  /* .logo-container {
+    height: calc(var(--logo-width) / 2);
+  } */
+
+  /* .portfolios h1 {
+    letter-spacing: 1.25rem;
+    font-size: 1.25rem;
+  }
+
+  .box {
+    width: calc(var(--box-size) * 0.45);
+    height: calc(var(--box-size) * 0.45);
+    margin: calc(var(--box-margin) * 0.5);
+    box-shadow: 0px 60px 60px -10px #8a8c76;
+    font-size: 1rem;
+  }
+
+  hr {
+    height: 3vh;
+  }
+
+  footer {
+    font-size: 0.25rem;
+    letter-spacing: 0.2rem;
+  } */
+}
+
+@media screen and (max-height: 550px) {
+  body {
+    height: 140vh;
   }
 }
